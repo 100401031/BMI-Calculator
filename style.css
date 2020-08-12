@@ -1,0 +1,291 @@
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+input {
+  outline: none;
+}
+button {
+  outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input-section {
+  padding: 73px 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #424242;
+}
+
+.logo-wrapper {
+  margin-right: 97px;
+  margin-top: 18px;
+}
+.logo-wrapper img {
+  width: 117px;
+}
+
+.input-block {
+  width: 250px;
+}
+.input-wrapper {
+  width: 100%;
+}
+.input-wrapper label {
+  display: block;
+  font-family: 'AppleSystemUIFont';
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 7px;
+  color: #ffd366;
+}
+.input-wrapper input {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid #ffd366;
+  border-radius: 10px;
+}
+.calc-wrapper {
+  margin-left: 53px;
+  margin-top: 18px;
+  width: 120px;
+  height: 120px;
+}
+.calc-wrapper .submit-btn {
+  font-size: 24px;
+  font-family: 'PingFangTC-Regular';
+  color: #424242;
+  background: #ffd366;
+  width: 120px;
+  height: 120px;
+  outline: none;
+  border: none;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.calc-wrapper .submit-btn:hover {
+  box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+.calc-wrapper .submit-btn:active {
+  background: #dea821;
+}
+.result {
+  display: flex;
+  width: max-content;
+}
+.result-text {
+  margin: auto;
+  font-family: 'SFNSDisplay';
+  font-size: 32px;
+  line-height: 32px;
+  margin-left: 18px;
+}
+.result-circle {
+  position: relative;
+  box-sizing: border-box;
+  width: 123px;
+  height: 123px;
+  border-width: 6px;
+  border-style: solid;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.result-circle .bmi-wrapper {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.result-circle .bmi-wrapper .result-num {
+  font-family: 'SFNSDisplay';
+  font-size: 32px;
+  line-height: 32px;
+}
+.result-circle .bmi-wrapper .bmi-text {
+  font-family: 'AppleSystemUIFont';
+  font-size: 14px;
+  line-height: 14px;
+}
+.result-circle .reset-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  padding: 3px;
+  border: 3px solid #424242;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.result.ideal {
+  color: #86d73f;
+  border-color: #86d73f;
+}
+.result.ideal .reset-btn {
+  background-color: #86d73f;
+}
+.result.underWeight {
+  color: #31baf9;
+  border-color: #31baf9;
+}
+.result.underWeight .reset-btn {
+  background-color: #31baf9;
+}
+.result.overWeight {
+  color: #ff982d;
+  border-color: #ff982d;
+}
+.result.overweight .reset-btn {
+  background-color: #ff982d;
+}
+.result.mildObesity {
+  color: #ff6c03;
+  border-color: #ff6c03;
+}
+.result.mildObesity .reset-btn {
+  background-color: #ff6c03;
+}
+.result.moderateObesity {
+  color: #ff6c03;
+  border-color: #ff6c03;
+}
+.result.moderateObesity .reset-btn {
+  background-color: #ff6c03;
+}
+.result.severeObesity {
+  color: #ff1200;
+  border-color: #ff1200;
+}
+.result.severeObesity .reset-btn {
+  background-color: #ff1200;
+}
+.record-section {
+  padding-top: 48px;
+  overflow: hidden;
+}
+.record-title {
+  font-family: 'SFNSDisplay';
+  font-size: 24px;
+  color: #424242;
+  text-align: center;
+}
+
+.record-ul {
+  margin: 36px;
+  padding: 0;
+}
+.record-li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 624px;
+  height: 62px;
+  background-color: #fff;
+  margin: 0 auto 16px;
+  padding: 0px 11px 0px 19px;
+}
+.record-li span {
+  display: flex;
+  height: fit-content;
+  margin: auto 0;
+}
+.record-li .main-text {
+  font-family: 'SFNSDisplay';
+  font-size: 20px;
+  color: #4a4a4a;
+}
+.record-li .label {
+  font-family: 'AppleSystemUIFont';
+  font-size: 12px;
+  line-height: 12px;
+  color: #424242;
+  margin: auto 7px auto 0px;
+}
+.record-li .date {
+  font-family: 'SFNSText';
+  font-size: 12px;
+  color: #424242;
+}
+.record-li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 7px;
+  height: 100%;
+}
+.record-li.ideal::before {
+  background: #86d73f;
+  box-shadow: 2px 0 3px 0 rgba(134, 215, 63, 0.29);
+}
+.record-li.underWeight::before {
+  background-color: #31baf9;
+  box-shadow: 2px 0 3px 0 rgba(49, 186, 249, 0.29);
+}
+.record-li.overWeight::before {
+  background: #ff982d;
+  box-shadow: 2px 0 3px 0 rgba(255, 152, 45, 0.29);
+}
+.record-li.mildObesity::before {
+  background: #ff6c03;
+  box-shadow: 2px 0 3px 0 rgba(255, 108, 3, 0.29);
+}
+.record-li.moderateObesity::before {
+  background: #ff6c03;
+  box-shadow: 2px 0 3px 0 rgba(255, 108, 3, 0.29);
+}
+.record-li.severeObesity::before {
+  background: #ff1200;
+  box-shadow: 2px 0 3px 0 rgba(255, 18, 0, 0.29);
+}

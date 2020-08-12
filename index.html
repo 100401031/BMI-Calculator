@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <section class="input-section">
+      <div class="logo-wrapper">
+        <img src="static/logo/BMICLogo.png" alt="" />
+      </div>
+      <div class="input-block">
+        <div class="input-wrapper">
+          <label for="height" min="1" max="300">身高 cm</label>
+          <input placeholder="請輸入身高" type="number" id="height" />
+        </div>
+        <br />
+        <div class="input-wrapper">
+          <label for="weight">體重 kg</label>
+          <input placeholder="請輸入體重" type="number" id="weight" min="1" max="600" />
+        </div>
+      </div>
+      <div id="calc-wrapper" class="calc-wrapper">
+        <button id="submit" class="submit-btn" onclick="submit()">看結果</button>
+      </div>
+    </section>
+    <section class="record-section">
+      <div class="record-title">BMI紀錄</div>
+      <ul id="recordUl" class="record-ul">
+        <!-- <li class="record-li">
+          <span class="main-text">理想</span>
+          <span>
+            <span class="label">BMI</span>
+            <span class="main-text">20.50</span>
+          </span>
+          <span>
+            <span class="label">weight</span>
+            <span class="main-text">70kg</span>
+          </span>
+          <span>
+            <span class="label">height</span>
+            <span class="main-text">170cm</span>
+          </span>
+          <span class="date">8-10-2020</span>
+        </li> -->
+      </ul>
+      <pre id="pre"></pre>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
