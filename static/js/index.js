@@ -12,10 +12,10 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const bmiData = db.ref('bmiData');
-const pre = document.getElementById('pre');
 const heightInput = document.getElementById('height');
 const weightInput = document.getElementById('weight');
 renderData();
+
 function submit() {
   const calcWrapper = document.getElementById('calc-wrapper');
   const height = heightInput.value;
