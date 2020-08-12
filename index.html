@@ -7,30 +7,35 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <section class="input-section">
-      <div class="logo-wrapper">
-        <img src="static/logo/BMICLogo.png" alt="" />
-      </div>
-      <div class="input-block">
-        <div class="input-wrapper">
-          <label for="height" min="1" max="300">身高 cm</label>
-          <input placeholder="請輸入身高" type="number" id="height" />
+    <div class="container">
+      <section class="input-section">
+        <div class="logo-wrapper">
+          <img src="static/img/logo/BMICLogo.png" alt="BMI Calculator" />
         </div>
-        <br />
-        <div class="input-wrapper">
-          <label for="weight">體重 kg</label>
-          <input placeholder="請輸入體重" type="number" id="weight" min="1" max="600" />
+        <div class="input-block">
+          <div class="input-wrapper">
+            <label for="height" min="1" max="300">身高 cm</label>
+            <input placeholder="請輸入身高" type="number" id="height" />
+          </div>
+          <br />
+          <div class="input-wrapper">
+            <label for="weight">體重 kg</label>
+            <input placeholder="請輸入體重" type="number" id="weight" min="1" max="600" />
+          </div>
         </div>
-      </div>
-      <div id="calc-wrapper" class="calc-wrapper">
-        <button id="submit" class="submit-btn" onclick="submit()">看結果</button>
-      </div>
-    </section>
-    <section class="record-section">
-      <div class="record-title">BMI紀錄</div>
-      <ul id="recordUl" class="record-ul"></ul>
-      <pre id="pre"></pre>
-    </section>
+        <div id="calc-wrapper" class="calc-wrapper">
+          <button id="submit" class="submit-btn" onclick="submit()">看結果</button>
+        </div>
+      </section>
+      <section class="record-section">
+        <div class="record-title">BMI紀錄</div>
+        <ul id="recordUl" class="record-ul"></ul>
+        <pre id="pre"></pre>
+      </section>
+      <footer>
+        <img src="static/img/logo/BMICLogo-black.png" alt="BMI Calculator" />
+      </footer>
+    </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>

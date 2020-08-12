@@ -25,7 +25,11 @@ li {
 input[type='number'] {
   -moz-appearance: textfield;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 .input-section {
   padding: 73px 0;
   display: flex;
@@ -244,6 +248,7 @@ input[type='number'] {
   font-family: 'SFNSDisplay';
   font-size: 20px;
   color: #4a4a4a;
+  min-width: 80px;
 }
 .record-li .label {
   font-family: 'AppleSystemUIFont';
@@ -288,4 +293,17 @@ input[type='number'] {
 .record-li.severeObesity::before {
   background: #ff1200;
   box-shadow: 2px 0 3px 0 rgba(255, 18, 0, 0.29);
+}
+
+footer {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background: #ffd366;
+  margin-top: auto;
+}
+footer img {
+  height: 55px;
+  width: 55px;
+  margin: auto;
 }

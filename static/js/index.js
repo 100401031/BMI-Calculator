@@ -101,7 +101,7 @@ const template = {
               <span class="bmi-text">BMI</span>
             </div>
             <button id="reset" class="reset-btn" onclick="reset()">
-              <img src="static/icon/icons_loop.png" alt="reset" />
+              <img src="static/img/icon/icons_loop.png" alt="reset" />
             </button>
           </div>
           <div class="result-text">${describe}</div>
