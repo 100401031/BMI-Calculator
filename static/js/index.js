@@ -39,7 +39,7 @@ function reset() {
   heightInput.value = null;
   weightInput.value = null;
 }
-function inputValidate(height, weight, BMI) {
+function inputValidate(height, weight) {
   if (height > 0 && weight > 0) {
     return true;
   } else {
