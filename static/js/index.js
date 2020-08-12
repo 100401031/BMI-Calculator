@@ -16,6 +16,7 @@ const heightInput = document.getElementById('height');
 const weightInput = document.getElementById('weight');
 renderData();
 
+//處理提交行為
 function submit() {
   const calcWrapper = document.getElementById('calc-wrapper');
   const height = heightInput.value;
@@ -32,6 +33,8 @@ function submit() {
   bmiData.push({ height, weight, BMI, describe, DescribeKey, timestamp });
   calcWrapper.innerHTML = template.result(BMI, DescribeKey, describe);
 }
+
+//處理重置行為
 function reset() {
   const calcWrapper = document.getElementById('calc-wrapper');
   calcWrapper.innerHTML = template.submitBtn();
@@ -39,6 +42,8 @@ function reset() {
   heightInput.value = null;
   weightInput.value = null;
 }
+
+//驗證身高及體重是否大於0
 function inputValidate(height, weight) {
   if (height > 0 && weight > 0) {
     return true;
@@ -47,11 +52,13 @@ function inputValidate(height, weight) {
     return false;
   }
 }
+//計算BMI值
 function calcBMI(height, weight) {
   const BMI = weight / Math.pow(height / 100, 2);
   const { DescribeKey, describe } = analysis(BMI);
   return { BMI: BMI.toFixed(2), DescribeKey, describe };
 }
+//解析BMI值結果
 function analysis(BMI) {
   if (BMI < 18.5) {
     return { DescribeKey: 'underWeight', describe: '過輕' };
@@ -68,12 +75,12 @@ function analysis(BMI) {
   }
 }
 
+//將資料render進DOM元素
 function renderData() {
   bmiData.orderByChild('timestamp').on('value', snapshot => {
     const recordUl = document.getElementById('recordUl');
     const listArray = [];
     recordUl.innerHTML = '';
-    // pre.innerHTML = JSON.stringify(snapshot.val(), null, 3);
     snapshot.forEach(item => {
       const date = new Date(item.val().timestamp);
       const dateString = `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`;
@@ -84,6 +91,7 @@ function renderData() {
   });
 }
 
+//樣板字串
 const template = {
   result: (BMI, DescribeKey, describe) => {
     return `<div class="result ${DescribeKey}">
