@@ -1,6 +1,7 @@
 const heightInput = document.getElementById('height');
 const weightInput = document.getElementById('weight');
 var bmiData;
+
 //樣板字串
 const template = {
   result: (BMI, DescribeKey, describe) => {
@@ -39,6 +40,8 @@ const template = {
   </li>`;
   }
 };
+
+//init rendering
 renderData();
 
 //處理提交行為
@@ -118,7 +121,8 @@ function renderData() {
   }
   recordUl.innerHTML = listArray.reverse().join('');
 }
-function initLocalStorage() {}
+
+//產生uuid
 function _uuid() {
   var d = Date.now();
   if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
